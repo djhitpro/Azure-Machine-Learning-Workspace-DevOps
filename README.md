@@ -7,7 +7,8 @@ And was inspired by the course 'Introduction to MLOps on Azure' on aCloudGuru
 # Getting Started
 1.	Require Microsoft Azure Subscription and Azure Devops Org and Project, Upload the folder to your Devops Organization's Repo folder provided from this repository.
 2.	Jobs require one Parallelism which will require a self hosted agent which can be run in Private Project
-(more paralellism will require a Public project or purchase paralellism), which is beyond the scope of this code. 
+(more paralellism will require a Public project or purchase of paralellism), which is beyond the scope of this code. 
+See step 4.
 
 
 3. Update the parameter file with your enviornment elements and update the pipeline.yaml to match.
