@@ -1,0 +1,42 @@
+trigger: none
+pr: none
+pool:
+ name: Default
+
+stages: 
+  - stage: arm_template_validate
+    jobs: 
+      - job: arm_template_validate
+        steps:
+            - checkout: self
+
+            - task: AzureResourceManagerTemplateDeployment@3
+              inputs:
+                deploymentScope: 'Resource Group'
+                azureResourceManagerConnection: 'Azure subscription 1(ADD YOUR SUBSCRIPTION ID)'
+                subscriptionId: 'ADD YOUR SUBSCRIPTION ID'
+                action: 'Create Or Update Resource Group'
+                resourceGroupName: 'machine-learning-workspace-rename'
+                location: 'East US 2'
+                templateLocation: 'Linked artifact'
+                csmFile: '$(System.DefaultWorkingDirectory)/ARM/mlworkspacedeploy.json'
+                csmParametersFile: '$(System.DefaultWorkingDirectory)/ARM/mlworkspacedeploy.param.json'
+                deploymentMode: 'Validation'
+  - stage: arm_template_deploy
+    dependsOn: arm_template_test
+    condition: succeeded()
+    jobs:
+      - job: arm_template_deploy
+        steps: 
+        - task: AzureResourceManagerTemplateDeployment@3
+          inputs:
+            deploymentScope: 'Resource Group'
+            azureResourceManagerConnection: 'Azure subscription 1(ADD YOUR SUBSCRIPTION ID)'
+            subscriptionId: 'ADD YOUR SUBSCRIPTION ID'
+            action: 'Create Or Update Resource Group'
+            resourceGroupName: 'machine-learning-workspace-rename'
+            location: 'East US 2'
+            templateLocation: 'Linked artifact'
+            csmFile: '$(System.DefaultWorkingDirectory)/ARM/mlworkspacedeploy.json'
+            csmParametersFile: '$(System.DefaultWorkingDirectory)/ARM/mlworkspacedeploy.param.json'
+            deploymentMode: 'Incremental'

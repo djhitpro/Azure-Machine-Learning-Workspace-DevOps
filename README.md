@@ -1,6 +1,3 @@
-# Azure-Machine-Learning-Workspace-DevOps
-Azure DevOps pipeline with ARM templates to deploy an Azure ML workspace with resources in a Subscription
-
 # Introduction DevOps Azure Machine Learning Workspace
 Pipeline delpoys an Azure Machine Learning Workspace within a resource group along with supporting and neccessary resources 
 ..to data science, train, build, deploy, integrate or just learn.
