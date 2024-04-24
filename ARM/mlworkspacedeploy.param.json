@@ -27,7 +27,7 @@
             "value": "azuremlworkspacestoragerename"
         },
         "appInsightsLogWorkspaceName": {
-            "value": "azuremlworkspace2logspace-rename"
+            "value": "azuremlworkspacelogspace-rename"
         },
         "applicationInsightsName": {
             "value": "azuremlworkspaceappinsight-rename"
