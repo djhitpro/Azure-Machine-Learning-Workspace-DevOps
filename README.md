@@ -1,4 +1,4 @@
-# Introduction DevOps Azure Machine Learning Workspace
+# Introduction - DevOps Azure Machine Learning Workspace
 Pipeline delpoys an Azure Machine Learning Workspace within a resource group along with supporting and neccessary resources 
 ..to data science, train, build, deploy, integrate or just learn.
 This will assist in AI-900: Microsoft Certified Azure AI Fundamentals
@@ -7,18 +7,18 @@ And was inspired by the course 'Introduction to MLOps on Azure' on aCloudGuru
 # Getting Started
 1.	Require Microsoft Azure Subscription and Azure Devops Org and Project, Upload the folder to your Devops Organization's Repo folder provided from this repository.
 2.	Jobs require one Parallelism which will require a self hosted agent which can be run in Private Project
-(more paralellism will require a Public project or purchase of paralellism), which is beyond the scope of this code. 
-
-*See step 4.
-
+(more paralellism will require a Public project or purchase of paralellism), which is beyond the scope of this code. *See step 4.
 
 3. Update the parameter file with your enviornment elements and update the pipeline.yaml to match.
 
 Note: Update the parameter values in the 'mlworkspacedeploy.param.json' (noted by 'rename')to fit your naming standards, uniqueness and environment.
 
 UPDATE:
+
 azureResourceManagerConnection: 'Azure subscription 1(ADD YOUR SUBSCRIPTION ID)'
+
 AND
+
 subscriptionId: 'ADD YOUR SUBSCRIPTION ID'
 
 AND makesure the resource group name defined in the azure-pipelines.yml matches the element in mlworkspacedeploy.param.json
@@ -34,7 +34,7 @@ Verify the folder path matches your devops project. If you upload this folder it
 deploy a VM instance in the Azure subscription in any resource group, 
 can be a server OS or client OS,(even your own workstation or laptop).
 I would recommend at least 2 vcpus for whatever SKU is used.  
-5. Create a PAT public Access Token in user setting gear next to your devops login account.
+5. Create a PAT public Access Token in user settings (gear) next to your devops login account.
 5.	On the device you plan to use as a self-hosted agent open your devops project in a browser. 
 Go to your Devops>Org>Project settings. Under Pipelines, select Agent Pools, and select the 'Default' Azure Pipelines
 and create a 'New agent' This will provide the download and instructions for Windows, macOS and Linux.
