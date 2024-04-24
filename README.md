@@ -32,7 +32,7 @@ Verify the folder path matches your devops project. If you upload this folder it
 deploy a VM instance in the Azure subscription in any resource group, 
 can be a server OS or client OS,(even your own workstation or laptop).
 I would recommend at least 2 vcpus for whatever SKU is used.  
-5. Create a PAT public Access Token under your devops login accounty
+5. Create a PAT public Access Token under your devops login account.
 5.	On the device you plan to use as a self-hosted agent open your devops project in a browser. 
 Go to your Devops>Org>Project settings. Under Pipelines, select Agent Pools, and select the 'Default' Azure Pipelines
 and create a 'New agent' This will provide the download and instructions for Windows, macOS and Linux.
