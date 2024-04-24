@@ -23,7 +23,7 @@ stages:
                 csmParametersFile: '$(System.DefaultWorkingDirectory)/ARM/mlworkspacedeploy.param.json'
                 deploymentMode: 'Validation'
   - stage: arm_template_deploy
-    dependsOn: arm_template_test
+    dependsOn: arm_template_validate
     condition: succeeded()
     jobs:
       - job: arm_template_deploy
