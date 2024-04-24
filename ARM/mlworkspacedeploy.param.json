@@ -1,0 +1,59 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "kind": {
+            "value": "Default"
+        },
+        "location": {
+            "value": "eastus2"
+        },
+        "workspaceName": {
+            "value": "azuremlworkspacerename"
+        },
+        "resourceGroupName": {
+            "value": "machine-learning-workspace-rename"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "tagValues": {
+            "value": {}
+        },
+        "keyVaultName": {
+            "value": "azuremlworkspacekeyvault-rename"
+        },
+        "storageAccountName": {
+            "value": "azuremlworkspacestoragerename"
+        },
+        "appInsightsLogWorkspaceName": {
+            "value": "azuremlworkspace2logspace-rename"
+        },
+        "applicationInsightsName": {
+            "value": "azuremlworkspaceappinsight-rename"
+        },
+        "storageAccountOption": {
+            "value": "new"
+        },
+        "storageAccountHnsEnabled": {
+            "value": false
+        },
+        "keyVaultOption": {
+            "value": "new"
+        },
+        "applicationInsightsOption": {
+            "value": "new"
+        },
+        "managedNetwork": {
+            "value": {
+                "isolationMode": "Disabled"
+            }
+        },
+        "identityType": {
+            "value": "systemAssigned"
+        },
+        "publicNetworkAccess": {
+            "value": "Enabled"
+        }
+    }
+}
