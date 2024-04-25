@@ -1,14 +1,14 @@
-# Introduction - DevOps Azure Machine Learning Workspace for MLops
+# Introduction - DevOps Azure Machine Learning Workspace ..for MLops
 The pipeline delpoys an Azure Machine Learning Workspace for MLops within a resource group in your subscription along with supporting and neccessary resources 
-..to data science, train, build, deploy, integrate or just learn.
+..to data science, train, build, deploy, integrate or just learn the Azure AI Machine Learning Studio.
 This will assist in AI-900: Microsoft Certified Azure AI Fundamentals
 And was inspired by the course 'Introduction to MLOps on Azure' on aCloudGuru
 
 # Getting Started
 1.	Require Microsoft Azure Subscription and Azure Devops Org and Project, Upload the folder to your Devops Organization's Repo folder provided from this repository.
 
-2.	The pipeline Jobs require one parallel job queued. Parallelism which will require a self-hosted agent which can run 'Private' project
-(more parallel jobs will require a 'Public' setting for a project or the purchase of parallelism), which is beyond the scope of this deployment. *See step 4.
+2.	The pipeline Jobs require one parallel job (queing) to deploy. Parallelism requires a self-hosted agent (needs to be configured) which runs in a 'Private' project.
+(more parallel jobs will require a 'Public' setting for a project or the purchase of Microsoft-hosted parallelism), which is beyond the scope of this deployment. *See step 4.
 
 3. Update the parameter file with your enviornment elements and update the pipeline.yaml to match.
 
@@ -54,6 +54,6 @@ Application Insights, Key vault, Log Analytics workspace and a Storage account.
 
 
 # Contribute
-TODO: It's a working example that can be built on. Possibly build out the MLops pipeline.
+TODO: It's a working example that can be built on. Possibly build out the pipeline.
 
 
