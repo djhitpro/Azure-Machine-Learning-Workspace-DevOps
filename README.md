@@ -7,8 +7,8 @@ And was inspired by the course 'Introduction to MLOps on Azure' on aCloudGuru
 # Getting Started
 1.	Require Microsoft Azure Subscription and Azure Devops Org and Project, Upload the folder to your Devops Organization's Repo folder provided from this repository.
 
-2.	Jobs require one Parallelism which will require a self hosted agent which can be run in Private Project
-(more paralellism will require a Public project or purchase of paralellism), which is beyond the scope of this code. *See step 4.
+2.	The pipeline Jobs require one parallel job queued. Parallelism which will require a self-hosted agent which can run 'Private' project
+(more parallel jobs will require a 'Public' setting for a project or the purchase of parallelism), which is beyond the scope of this deployment. *See step 4.
 
 3. Update the parameter file with your enviornment elements and update the pipeline.yaml to match.
 
@@ -33,27 +33,27 @@ Verify the folder path matches your devops project. If you upload this folder it
 
 4.	However! here are high level accurate and tested instructions for deploying your own self-hosted agent; 
 deploy a VM instance in the Azure subscription in any resource group, 
-can be a server OS or client OS,(even your own workstation or laptop).
+can be a server OS or client OS,(your own workstation or laptop can be used locally).
 I would recommend at least 2 vcpus for whatever SKU is used.  
 
 5. Create a Public Access Token (PAT) in user settings (the gear *) next to your devops login account.
 
-6.	On the device you plan to use as a self-hosted agent open your devops project in a browser. 
+6.	On the compute OS you plan to use as a self-hosted agent open your devops project in a browser. 
 Go to your Devops>Org>Project settings. Under Pipelines, select Agent Pools, and select the 'Default' Azure Pipelines and create a 'New agent' This will provide the download and instructions for Windows, macOS and Linux. After installing the agent on your device and following the configure account instructions, make sure you run .\run.cmd,  or ./run.sh with elevated permissions in Powershell or Bash.
 
-7.   Again go to Devops>Org>Project settings. Under Pipelines, select Agent Pools, and select the 'Default' then the Agents tab
+7.   Again in the browser go to Devops>Org>Project settings. Under Pipelines, select Agent Pools, and select the 'Default' then the Agents tab
 It should show the name of your server, workstation, pc as online.
 
 8. Congrats now you can run the pipeline.
 
 
 # Build and Test
-Pipleline deploys resources defined ARM folder containing an ARM template 'mlworkspacedeploy.json' and 'mlworkspacedeploy.param.json' file 
+Pipleline deploys resources defined in ARM folder containing an ARM template 'mlworkspacedeploy.json' and 'mlworkspacedeploy.param.json' file 
 it will create one resource group for the Azure ML workspace containing the Azure Machine Learning workspace, 
 Application Insights, Key vault, Log Analytics workspace and a Storage account.
 
 
 # Contribute
-TODO: It is a working example that can be built on. Possibly build out the MLops pipeline.
+TODO: It's a working example that can be built on. Possibly build out the MLops pipeline.
 
 
